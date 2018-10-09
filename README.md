@@ -173,6 +173,13 @@ sleep()方法导致了程序暂停执行指定的时间，让出cpu该其他线�
     - AIDL
     - ContentProvider
     - Socket 
+    
+  - AIDL使用方法
+    - 第1步：定义一个*.aidl文件，eclipse会自动生成，android Studio需要编译一下（用Make project）
+    - 第2步：实现AIDL文件生成的JAVA接口Stub
+    - 第3步：定义一个自己的service，在实现自己的service时，为了其他应用可以通过bindService来和我们的service进行交互，我们都要实现service中的onBind()方法，并且返回一个继承了Binder的内部类
+    - 第4步，同一个应用中的Activity为该Service中赋值，使用service
+    
 - 消息推送使用第三方和自己实现有什么不同
 - webView优化
 - 如何对Android进行性能分析？
@@ -183,6 +190,29 @@ sleep()方法导致了程序暂停执行指定的时间，让出cpu该其他线�
 - 安全问题
 - Html相关技术
 - 屏幕适配
+
+- crash种类，避免
+  - NullPointException
+  - IndexOutOfBoundsException 
+  - 在类中找不到某个View
+  - Intent存放的内容过大
+  - 在子线程中操作UI变化
+  - 在子线程中开子线程，但是没有新启一个Looper
+  - StackOverflow
+     发生这类crash，一般是因为layout布局文件嵌套的太深。在项目中，我们尽量要将布局文件控制在5层以内，并且还要经常使用Hierarchy View对布局进行优化，移除掉哪些冗余的View或者ViewGroup。
+  - ANR(Application Not Responding)
+  - ResourceNotFoundException
+- ANR的本质
+  - 本质是主线程无法响应
+
+ - 蓝牙与wifi数据传输
+ 
+ 
+
+- 线程同步方式
+  [参考](https://www.cnblogs.com/XHJT/p/3897440.html)
+  
+  
 
 ----------------------------------------
 
