@@ -1,5 +1,7 @@
 # Android面试相关资料
 
+##[Java部分](https://github.com/fengcaizhi/AndroidInterView/blob/master/ReadPrinciple.md)
+
 ### 内存泄漏原因？
   - 当一个对象不再使用需要回收时，由于另一个正在使用的对象持有它的引用，导致不能被及时回收仍保留在对内存中，这就产生了内存泄漏
   - 检查和分析：`内存泄漏发生在堆内存中`,需要借助MAT、LeakCannary等工具来进行监测分析
