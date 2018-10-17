@@ -1,6 +1,6 @@
 # Android面试相关资料
 
-##[Java部分](https://github.com/fengcaizhi/AndroidInterView/blob/master/app/src/main/java/javadoc/JavaReadMe.md)
+## [Java部分](https://github.com/fengcaizhi/AndroidInterView/blob/master/app/src/main/java/javadoc/JavaReadMe.md)
 
 ### 内存泄漏原因？
   - 当一个对象不再使用需要回收时，由于另一个正在使用的对象持有它的引用，导致不能被及时回收仍保留在对内存中，这就产生了内存泄漏
