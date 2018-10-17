@@ -1,7 +1,11 @@
 package com.feng.interview
 
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Looper
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -12,6 +16,8 @@ class MainActivity : AppCompatActivity() {
 
         // Example of a call to a native method
         sample_text.text = stringFromJNI()
+        Looper.prepare()
+
     }
 
     /**
@@ -26,5 +32,12 @@ class MainActivity : AppCompatActivity() {
         init {
             System.loadLibrary("native-lib")
         }
+    }
+
+    class B : BroadcastReceiver() {
+        override fun onReceive(context: Context?, intent: Intent?) {
+            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        }
+
     }
 }
